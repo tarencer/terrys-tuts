@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.terry.world</groupId>
+	<artifactId>HibernateTutorials</artifactId>
+	<version>1.0.0</version>
+	<name>HibernateTutorials</name>
+	<packaging>pom</packaging>
+	<repositories>
+		<repository>
+			<id>central</id>
+			<name>Maven Repository Switchboard</name>
+			<layout>default</layout>
+			<url>http://repo1.maven.org/maven2</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>repository.jboss.org-public</id>
+			<name>JBoss repository</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.1.8.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+		</dependency>
+		<!-- <dependency> <groupId>net.sf.ehcache</groupId> <artifactId>ehcache-core</artifactId> 
+			<version>2.2.0</version> </dependency> -->
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.1-901.jdbc4</version>
+		</dependency>
+
+	</dependencies>
+	<modules>
+		<module>Hibernate_01_CRUD</module>
+		<module>Hibernate_02_Annotations</module>
+		<module>Hibernate_03_PrimaryKeys</module>
+		<module>Hibernate_04_ValueObjects</module>
+		<module>Hibernate_05_Collections</module>
+		<module>Hibernate_06_Mappings</module>
+		<module>Hibernate_07_ObjectStates</module>
+		<module>Hibernate_08_Inheritance</module>
+		<module>Hibernate_09_HQL</module>
+		<module>Hibernate_10_Caching</module>
+	</modules>
+</project>
