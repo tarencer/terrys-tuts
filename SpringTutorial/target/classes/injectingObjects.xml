@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="triangle" class="com.terry.world.core_spring._4_InjectingObjects.Triangle" >
+		<property name="pointA" ref="pointA"/>
+		<property name="pointB" ref="pointB"/>
+		<property name="pointC" ref="pointC"/>
+	</bean>
+	
+	
+	<bean id="pointA" class="com.terry.world.core_spring._4_InjectingObjects.Point">
+		<property name="x" value="100"/>
+		<property name="y" value="100"/>
+	</bean>
+	
+	<bean id="pointB" class="com.terry.world.core_spring._4_InjectingObjects.Point">
+		<property name="x" value="75"/>
+		<property name="y" value="125"/>
+	</bean>
+	
+	<bean id="pointC" class="com.terry.world.core_spring._4_InjectingObjects.Point">
+		<property name="x" value="125"/>
+		<property name="y" value="125"/>
+	</bean>
+</beans>

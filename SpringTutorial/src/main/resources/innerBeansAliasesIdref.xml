@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="triangle" class="com.terry.world.core_spring._5_InnerBeans_Aliases_Idref.Triangle" name="triangle-name">
+		<property name="startPoint">
+			<!-- The idref element allow you to pass the bean id (which is the string value not the reference) 
+			of another bean in the container to a <property/> or <constructor-arg/>. -->
+			<idref bean="zeroPoint"/> <!-- passes value "zeroPoint" -->
+		</property>
+		<property name="pointA">
+			<ref bean="zeroPoint"/>
+		</property>
+		<property name="pointB">
+			<bean class="com.terry.world.core_spring._5_InnerBeans_Aliases_Idref.Point">
+				<property name="x" value="75"/>
+				<property name="y" value="125"/>
+			</bean>
+		</property>
+		<property name="pointC">
+			<bean class="com.terry.world.core_spring._5_InnerBeans_Aliases_Idref.Point">
+				<property name="x" value="125"/>
+				<property name="y" value="125"/>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="zeroPoint" class="com.terry.world.core_spring._5_InnerBeans_Aliases_Idref.Point">
+		<property name="x" value="0"/>
+		<property name="y" value="0"/>
+	</bean>
+	
+	<alias name="triangle" alias="triangle-alias"/>
+</beans>

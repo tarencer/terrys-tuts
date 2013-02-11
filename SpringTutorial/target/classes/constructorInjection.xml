@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<!--
+	Throws Exception "Could not resolve matching constructor" as spring cant identify which constructor to call!!!
+	 
+	<bean id="triangle_Single" class="com.terry.world.constructorInjection.Triangle" >
+		<constructor-arg value="Equilateral"/>
+	</bean> 
+	
+	-->
+	
+	<bean id="triangle_String" class="com.terry.world.core_spring._3_ConstructorInjection.Triangle" >
+		<constructor-arg index="0" type="java.lang.String" name="type" value="Equilateral"/>
+	</bean>
+	
+	<bean id="triangle_String_int_int" class="com.terry.world.core_spring._3_ConstructorInjection.Triangle" >
+		<constructor-arg index="0" type="java.lang.String" name="type" value="Equilateral"/>
+		<constructor-arg index="1" type="int" name="x" value="10"/>
+		<constructor-arg index="2" name="y" value="20"/>
+	</bean>
+	
+</beans>
